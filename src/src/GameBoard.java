@@ -7,14 +7,11 @@ import java.util.Scanner;
 public class GameBoard {
 	Scanner sc = new Scanner(System.in);
 	int[][] board;
+	Snake snake = new Snake(5);
 
 	public GameBoard() {
 		this.board = setupBoard();
-	}
 
-	public static void main(String[] args) {
-		GameBoard gameBoard = new GameBoard();
-		gameBoard.printBoard();
 	}
 
 	public void printBoard() {
@@ -26,7 +23,7 @@ public class GameBoard {
 		}
 	}
 
-	public int[][] setupBoard() {
+	private int[][] setupBoard() {
 		System.out.println("Please enter board size: ");
 		int size = sc.nextInt();
 		int[][] board = new int[size][4*size];
