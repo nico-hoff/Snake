@@ -2,7 +2,10 @@ import org.w3c.dom.ls.LSOutput;
 
 import java.util.Arrays;
 
+import java.util.Scanner;
+
 public class GameBoard {
+	Scanner sc = new Scanner(System.in);
 	int[][] board;
 	public GameBoard() {
 		this.board = setupBoard();
