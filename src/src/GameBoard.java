@@ -16,7 +16,7 @@ public class GameBoard {
 
 	}
 
-	public void printBoard() {
+	public void printBoard()
 
 	}
 
