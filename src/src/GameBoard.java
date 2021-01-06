@@ -2,9 +2,6 @@ import org.w3c.dom.ls.LSOutput;
 
 import java.util.Arrays;
 
-import java.util.Scanner;
-
-
 public class GameBoard {
 	int[][] board;
 	public GameBoard() {
@@ -13,10 +10,9 @@ public class GameBoard {
 
 	public static void main(String[] args) {
 
-
 	}
 
-	public void printBoard()
+	public void printBoard() {
 
 	}
 
