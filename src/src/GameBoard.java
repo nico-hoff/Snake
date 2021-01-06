@@ -29,7 +29,7 @@ public class GameBoard {
 	public int[][] setupBoard() {
 		System.out.println("Please enter board size: ");
 		int size = sc.nextInt();
-		int[][] board = new int[size][size];
+		int[][] board = new int[size][4*size];
 		Arrays.stream(board)
 			.forEach(c -> Arrays.stream(c)
 				.forEach(v -> v = 0));
