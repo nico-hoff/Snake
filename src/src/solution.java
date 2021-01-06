@@ -1,3 +1,4 @@
+/*
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
@@ -241,7 +242,7 @@ public class Board extends JPanel implements ActionListener {
         }
     }
 }
-    First we will define the constants used in our game.
+First we will define the constants used in our game.
 
 private final int B_WIDTH = 300;
 private final int B_HEIGHT = 300;
@@ -249,84 +250,84 @@ private final int DOT_SIZE = 10;
 private final int ALL_DOTS = 900;
 private final int RAND_POS = 29;
 private final int DELAY = 140;
-        The B_WIDTH and B_HEIGHT constants determine the size of the board. The DOT_SIZE is the size of the apple and the dot of the snake. The ALL_DOTS constant defines the maximum number of possible dots on the board (900 = (300*300)/(10*10)). The RAND_POS constant is used to calculate a random position for an apple. The DELAY constant determines the speed of the game.
+The B_WIDTH and B_HEIGHT constants determine the size of the board. The DOT_SIZE is the size of the apple and the dot of the snake. The ALL_DOTS constant defines the maximum number of possible dots on the board (900 = (300*300)/(10*10)). The RAND_POS constant is used to calculate a random position for an apple. The DELAY constant determines the speed of the game.
 
 private final int x[] = new int[ALL_DOTS];
 private final int y[] = new int[ALL_DOTS];
-        These two arrays store the x and y coordinates of all joints of a snake.
+These two arrays store the x and y coordinates of all joints of a snake.
 
 private void loadImages() {
 
-        ImageIcon iid = new ImageIcon("src/resources/dot.png");
-        ball = iid.getImage();
+    ImageIcon iid = new ImageIcon("src/resources/dot.png");
+    ball = iid.getImage();
 
-        ImageIcon iia = new ImageIcon("src/resources/apple.png");
-        apple = iia.getImage();
+    ImageIcon iia = new ImageIcon("src/resources/apple.png");
+    apple = iia.getImage();
 
-        ImageIcon iih = new ImageIcon("src/resources/head.png");
-        head = iih.getImage();
-        }
-        In the loadImages() method we get the images for the game. The ImageIcon class is used for displaying PNG images.
+    ImageIcon iih = new ImageIcon("src/resources/head.png");
+    head = iih.getImage();
+}
+In the loadImages() method we get the images for the game. The ImageIcon class is used for displaying PNG images.
 
 private void initGame() {
 
-        dots = 3;
+    dots = 3;
 
-        for (int z = 0; z < dots; z++) {
+    for (int z = 0; z < dots; z++) {
         x[z] = 50 - z * 10;
         y[z] = 50;
-        }
+    }
 
-        locateApple();
+    locateApple();
 
-        timer = new Timer(DELAY, this);
-        timer.start();
-        }
-        In the initGame() method we create the snake, randomly locate an apple on the board, and start the timer.
+    timer = new Timer(DELAY, this);
+    timer.start();
+}
+In the initGame() method we create the snake, randomly locate an apple on the board, and start the timer.
 
 private void checkApple() {
 
-        if ((x[0] == apple_x) && (y[0] == apple_y)) {
+    if ((x[0] == apple_x) && (y[0] == apple_y)) {
 
         dots++;
         locateApple();
-        }
-        }
-        If the apple collides with the head, we increase the number of joints of the snake. We call the locateApple() method which randomly positions a new apple object.
+    }
+}
+If the apple collides with the head, we increase the number of joints of the snake. We call the locateApple() method which randomly positions a new apple object.
 
-        In the move() method we have the key algorithm of the game. To understand it, look at how the snake is moving. We control the head of the snake. We can change its direction with the cursor keys. The rest of the joints move one position up the chain. The second joint moves where the first was, the third joint where the second was etc.
+In the move() method we have the key algorithm of the game. To understand it, look at how the snake is moving. We control the head of the snake. We can change its direction with the cursor keys. The rest of the joints move one position up the chain. The second joint moves where the first was, the third joint where the second was etc.
 
-        for (int z = dots; z > 0; z--) {
-        x[z] = x[(z - 1)];
-        y[z] = y[(z - 1)];
-        }
-        This code moves the joints up the chain.
+for (int z = dots; z > 0; z--) {
+    x[z] = x[(z - 1)];
+    y[z] = y[(z - 1)];
+}
+This code moves the joints up the chain.
 
-        if (leftDirection) {
-        x[0] -= DOT_SIZE;
-        }
-        This line moves the head to the left.
+if (leftDirection) {
+    x[0] -= DOT_SIZE;
+}
+This line moves the head to the left.
 
-        In the checkCollision() method, we determine if the snake has hit itself or one of the walls.
+In the checkCollision() method, we determine if the snake has hit itself or one of the walls.
 
-        for (int z = dots; z > 0; z--) {
+for (int z = dots; z > 0; z--) {
 
-        if ((z > 4) && (x[0] == x[z]) && (y[0] == y[z])) {
+    if ((z > 4) && (x[0] == x[z]) && (y[0] == y[z])) {
         inGame = false;
-        }
-        }
-        If the snake hits one of its joints with its head the game is over.
+    }
+}
+If the snake hits one of its joints with its head the game is over.
 
-        if (y[0] >= B_HEIGHT) {
-        inGame = false;
-        }
-        The game is finished if the snake hits the bottom of the board.
+if (y[0] >= B_HEIGHT) {
+    inGame = false;
+}
+The game is finished if the snake hits the bottom of the board.
 
-        Snake.java
-        package com.zetcode;
+Snake.java
+package com.zetcode;
 
-        import java.awt.EventQueue;
-        import javax.swing.JFrame;
+import java.awt.EventQueue;
+import javax.swing.JFrame;
 
 public class Snake extends JFrame {
 
@@ -355,3 +356,4 @@ public class Snake extends JFrame {
         });
     }
 }
+ */
