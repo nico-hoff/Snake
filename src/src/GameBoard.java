@@ -1,5 +1,3 @@
-import org.w3c.dom.ls.LSOutput;
-
 import java.util.Arrays;
 
 public class GameBoard {
@@ -9,11 +7,16 @@ public class GameBoard {
 	}
 
 	public static void main(String[] args) {
-
+		GameBoard gameBoard = new GameBoard();
+		gameBoard.printBoard();
 	}
 
 	public void printBoard() {
-
+		for(int i = 0; i < 100; i++) {
+			for (int j = 0; j < 100; j++) {
+				System.out.println(board[i][j]);
+			}
+		}
 	}
 
 	public static int[][] setupBoard() {
